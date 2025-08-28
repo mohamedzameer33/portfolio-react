@@ -1,0 +1,314 @@
+/* Existing Styles (Unchanged) */
+.contact-section {
+  padding: 4rem 2rem;
+  color: #ecf0f1; /* Soft white */
+  text-align: center;
+  margin: 2rem auto;
+  background: rgba(31, 41, 55, 0.8); /* Semi-transparent dark gray-blue */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.get-in-touch h2,
+.lets-connect h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00d4ff; /* Cyan */
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+.get-in-touch p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #bdc3c7; /* Light gray */
+}
+
+.lets-connect {
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.connect-details {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.connect-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Ensure consistent horizontal alignment */
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.connect-item:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.connect-item i {
+  font-size: 1.8rem;
+  color: #00ffc8; /* Bright cyan */
+  display: flex; /* Ensure icon container is flex for centering */
+  align-items: center;
+  justify-content: center;
+  width: 2rem; /* Fixed width for consistent alignment */
+  height: 2rem;
+  line-height: 1; /* Normalize line height */
+}
+
+.connect-item span,
+.connect-item a {
+  font-size: 1.1rem;
+  color: #ecf0f1; /* Soft white */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.connect-item a:hover {
+  color: #ff9900; /* Golden orange */
+}
+
+.icon-email::before {
+  content: "✉️"; /* Email icon */
+  font-size: 1.5rem;
+  line-height: 1; /* Normalize line height */
+}
+
+.icon-phone::before {
+  content: "📞"; /* Phone icon */
+  font-size: 1.5rem;
+  line-height: 1; /* Normalize line height */
+  display: inline-flex; /* Ensure emoji is centered */
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-github::before {
+  content: "👨‍💻"; /* GitHub icon */
+  font-size: 1.5rem;
+  line-height: 1; /* Normalize line height */
+}
+
+.icon-linkedin::before {
+  content: "💼"; /* LinkedIn icon */
+  font-size: 1.5rem;
+  line-height: 1; /* Normalize line height */
+}
+
+/* Existing New Styles for Grid and Form (Unchanged) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for Let's Connect and Form */
+  gap: 2rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.connectme {
+  background: rgba(31, 41, 55, 0.8); /* Matches .contact-section */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+.connectme h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #00d4ff; /* Cyan */
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(31, 41, 55, 0.9); /* Slightly darker for inputs */
+  color: #ecf0f1; /* Soft white */
+  border: 1px solid #00B4D8; /* Cyan border */
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #FFD700; /* Golden yellow */
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bdc3c7; /* Light gray */
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background: #FFD700; /* Golden yellow */
+  color: #1F2937; /* Dark gray-blue */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #ff9900; /* Golden orange */
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
+}
+
+/* Responsive Design (Extended for Icon Centering) */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+
+  .get-in-touch h2,
+  .lets-connect h2,
+  .connectme h2 {
+    font-size: 2rem;
+  }
+
+  .get-in-touch p {
+    font-size: 1rem;
+  }
+
+  .lets-connect {
+    padding: 1.5rem;
+  }
+
+  .connect-details {
+    gap: 1rem;
+  }
+
+  .connect-item {
+    padding: 0.8rem;
+  }
+
+  .connect-item i {
+    font-size: 1.5rem;
+    width: 1.8rem; /* Adjusted for smaller screens */
+    height: 1.8rem;
+  }
+
+  .connect-item span,
+  .connect-item a {
+    font-size: 1rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 1.5rem;
+  }
+
+  .connectme {
+    padding: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 1.5rem 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .get-in-touch h2,
+  .lets-connect h2,
+  .connectme h2 {
+    font-size: 1.6rem;
+  }
+
+  .get-in-touch p {
+    font-size: 0.9rem;
+  }
+
+  .lets-connect {
+    padding: 1rem;
+  }
+
+  .connect-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    justify-content: center; /* Center content in column layout */
+  }
+
+  .connect-item:hover {
+    transform: translateX(0);
+    transform: translateY(-5px);
+  }
+
+  .connect-item i {
+    font-size: 1.3rem;
+    width: 1.5rem; /* Adjusted for smaller screens */
+    height: 1.5rem;
+  }
+
+  .connect-item span,
+  .connect-item a {
+    font-size: 0.9rem;
+  }
+
+  .connectme {
+    padding: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
